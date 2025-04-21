@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'pixelify sans';
+}
+
+body {
+    overflow: hidden;
+}
+
+nav {
+    background: #352dc3;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+nav h1 {
+    font-size: 3.5em;
+}
+
+header {
+    background: #0359ac;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+.choose {
+    background: url(images/bg.png) no-repeat fixed center;
+    background-size: cover;
+    min-height: calc(100vh - 190px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:50px;
+}
+
+.choose h1 {
+    font-size: 3em;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 15px;
+}
+
+.options img {
+    min-height: 150px;
+    min-width: 150px;
+    border: 15px solid #122f4a;
+    padding: 5px;
+}
