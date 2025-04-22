@@ -13,7 +13,7 @@ let botScore = 0;
 let cheatMode = false;
 
 const winningCases = {
-    rock: "paper",
+    rock: "scissors",
     paper: "rock",
     scissors: "paper",
 };
