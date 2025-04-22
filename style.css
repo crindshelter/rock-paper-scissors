@@ -72,3 +72,12 @@ header h1 {
     border: 15px solid #122f4a;
     padding: 5px;
 }
+
+.player img {
+    transition: all 0.5s ease;
+}
+
+.player img:hover {
+    border-color: #2a72b5;
+    cursor: pointer;
+}
