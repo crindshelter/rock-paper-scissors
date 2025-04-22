@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav>
-        <h1>ROCK PAPER SCISSORS</h1>
+        <h1 class="hidden-button">ROCK PAPER SCISSORS</h1>
     </nav>
     <header>
         <h1>Player Score: <span id="player-score">0</span></h1>
@@ -37,6 +37,13 @@
         
     </section>
     <div class="message">WIN</div>
+    <div class="hidden">
+        <label for="time">time Seconds</label>
+        <input id="time" value="2000" type="number" name="time">
+        <label for="cheat">Always WIN</label>
+        <input id="cheat" name="cheat" type="checkbox"> 
+        <button id="button-cheat">Submit</button>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

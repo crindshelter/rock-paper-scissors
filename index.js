@@ -5,8 +5,12 @@ let botRock = document.querySelector("#bot-rock");
 let botPaper = document.querySelector("#bot-paper");
 let botScissors = document.querySelector("#bot-scissors");
 
+let hiddenButton = document.querySelector(".hidden-button");
+
 let playerScore = 0;
 let botScore = 0;
+
+let cheatMode = false;
 
 const winningCases = {
     rock: "paper",
@@ -14,10 +18,18 @@ const winningCases = {
     scissors: "paper",
 };
 
-const timeSeconds = 2000;
+let timeSeconds = 2000;
 
 function main() {
     setupChoiceListeners()
+    clickCount = 0;
+    hiddenButton.addEventListener("click", ()=>{
+        clickCount++;
+        if (clickCount > 9) {
+            cheatFunc()
+        }
+    })
+
 }
 
 function setupChoiceListeners() {
@@ -42,9 +54,9 @@ function playRound(humanChoice, botChoice) {
     styleBot(botChoice);
     stylePlayer(humanChoice);
 
-    if (humanChoice === botChoice) {
+    if (humanChoice === botChoice && cheatMode === false) {
         displayMessage("DRAW")
-    } else if (winningCases[humanChoice] === botChoice) {
+    } else if (winningCases[humanChoice] === botChoice || cheatMode === true) {
         playerScore++;
         playerScoreText.innerHTML = playerScore;
         displayMessage("WIN")
@@ -91,5 +103,24 @@ function displayMessage(message){
         messageElement.textContent = "";
     }, timeSeconds);
 }
+
+
+function cheatFunc(){
+    let hiddenElement = document.querySelector(".hidden");
+    let time = document.querySelector("#time");
+    let check = document.querySelector("#cheat");
+    hiddenElement.style.display = "flex";
+    let buttonCheat = document.querySelector("#button-cheat");
+    
+    buttonCheat.onclick = ()=> {
+        hiddenElement.style.display = "none";
+        timeSeconds = time.value;
+        if (check.checked) {
+            cheatMode = true;
+        }
+    }
+
+}
+
 
 main()
