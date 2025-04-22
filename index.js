@@ -14,6 +14,8 @@ const winningCases = {
     scissors: "paper",
 };
 
+const timeSeconds = 2000;
+
 function main() {
     setupChoiceListeners()
 }
@@ -71,7 +73,7 @@ function styleBot(botChoice) {
         element.style.borderColor = "red";
         setTimeout(() => {
             element.style.borderColor = ""; 
-        }, 3000); 
+        }, timeSeconds); 
     }
 }
 
@@ -80,7 +82,7 @@ function stylePlayer(playerChoice) {
     playerElement.style.borderColor = "green";
     setTimeout(() => {
         playerElement.style.borderColor = "";
-    }, 3000);
+    }, timeSeconds);
 }
 
 main()
