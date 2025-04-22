@@ -74,10 +74,26 @@ header h1 {
 }
 
 .player img {
-    transition: all 0.5s ease;
+    transition: border 0.5s ease;
 }
 
 .player img:hover {
     border-color: #2a72b5;
     cursor: pointer;
+}
+
+@media (max-height: 900px) {
+    .options img {
+        min-height: 70px;
+        min-width: 70px;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        overflow-y: visible;
+    }
+    .options {
+        flex-wrap: wrap;
+    }
 }
