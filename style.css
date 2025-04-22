@@ -82,6 +82,24 @@ header h1 {
     cursor: pointer;
 }
 
+.message {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    background-color: #70a9ff90;
+    font-size: 15em;
+    text-shadow: 0 15px rgb(0, 0, 0);
+    color: white;
+    border: 15px solid black;
+}
+
+
 @media (max-height: 900px) {
     .options img {
         min-height: 70px;

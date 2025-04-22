@@ -43,19 +43,16 @@ function playRound(humanChoice, botChoice) {
     stylePlayer(humanChoice);
 
     if (humanChoice === botChoice) {
-        alert('draw');
+        displayMessage("DRAW")
     } else if (winningCases[humanChoice] === botChoice) {
         playerScore++;
         playerScoreText.innerHTML = playerScore;
-        alert('win')
+        displayMessage("WIN")
     } else {
         botScore++;
         botScoreText.innerHTML = botScore;
-        alert('lose')
+        displayMessage("LOSE")
     }
-
-    
-
 }
 
 function styleBot(botChoice) {
@@ -82,6 +79,16 @@ function stylePlayer(playerChoice) {
     playerElement.style.borderColor = "green";
     setTimeout(() => {
         playerElement.style.borderColor = "";
+    }, timeSeconds);
+}
+
+function displayMessage(message){ 
+    let messageElement = document.querySelector(".message");
+    messageElement.style.display = "flex";
+    messageElement.textContent = message;
+    setTimeout(() => {
+        messageElement.style.display = "none";
+        messageElement.textContent = "";
     }, timeSeconds);
 }
 
